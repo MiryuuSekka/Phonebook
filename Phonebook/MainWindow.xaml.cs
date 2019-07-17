@@ -3,6 +3,7 @@ using System.Windows;
 using System.Text.RegularExpressions;
 using FileManager;
 using FileManager.Models;
+using System.Collections.Generic;
 
 namespace Phonebook
 {
@@ -115,12 +116,13 @@ namespace Phonebook
 
             string str;
             tb_text.Text = "";
-            foreach (var item in Data)
+            for (int i = 0; i < Data.Count; i++)
             {
-                str = item.LastName.ToString() + "   ";
-                str += item.FirstName.ToString() + "   ";
-                str += item.BirthYear.ToString() + "   ";
-                str += item.Phone.ToString() + "\n";
+                str = i.ToString() + "    ";
+                str += Data[i].LastName.ToString() + "   ";
+                str += Data[i].FirstName.ToString() + "   ";
+                str += Data[i].BirthYear.ToString() + "   ";
+                str += Data[i].Phone.ToString() + "\n";
                 tb_text.Text += str;
             }
         }
@@ -147,6 +149,28 @@ namespace Phonebook
             int.TryParse(tb_id.Text, out int id);
             LocalBook.RemoveFromList(id);
             RefreshTable();
+        }
+
+        private void Btn_Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshTable();
+        }
+
+        private void Btn_Search_Click(object sender, RoutedEventArgs e)
+        {
+            var Finded = LocalBook.SearchInList(tb_Search.Text);
+
+            string str;
+            tb_text.Text = "";
+            for (int i = 0; i < Finded.Count; i++)
+            {
+                str = i.ToString() + "    ";
+                str += Finded[i].LastName.ToString() + "   ";
+                str += Finded[i].FirstName.ToString() + "   ";
+                str += Finded[i].BirthYear.ToString() + "   ";
+                str += Finded[i].Phone.ToString() + "\n";
+                tb_text.Text += str;
+            }
         }
     }
 }
