@@ -32,6 +32,11 @@ namespace FileManager
             return false;
         }
 
+        public void RemoveFromList(Person SelectedPerson)
+        {
+            LocalPhoneBook.Remove(SelectedPerson);
+        }
+
         public void AddToList(Person newPerson)
         {
             LocalPhoneBook.Add(newPerson);

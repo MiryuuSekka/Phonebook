@@ -27,16 +27,9 @@ namespace FileManager.Helpers
 
         internal bool ReadFile(ref AnyType notes)
         {
-            using (var reader = new FileStream("Note.xml", FileMode.Open))
+            using (var reader = new FileStream("Note.xml", FileMode.OpenOrCreate))
             {
-                try
-                {
-                    notes = (AnyType)_serializer.Deserialize(reader);
-                }
-                catch (FileNotFoundException)
-                {
-                    return false; 
-                }
+                notes = (AnyType)_serializer.Deserialize(reader);
             }
             return true;
         }

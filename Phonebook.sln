@@ -1,9 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook", "Phonebook\Phonebook.csproj", "{610D5D77-CF7E-4DB5-8A9E-96DA4477A102}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager", "FileManager\FileManager.csproj", "{AA136D2C-A35F-4F87-BD71-C676A3F7E272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelephoneBookWEB", "TelephoneBookWEB\TelephoneBookWEB.csproj", "{029085E2-1457-4566-8647-1602C64FF315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +39,23 @@ Global
 		{AA136D2C-A35F-4F87-BD71-C676A3F7E272}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{AA136D2C-A35F-4F87-BD71-C676A3F7E272}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AA136D2C-A35F-4F87-BD71-C676A3F7E272}.Release|x86.ActiveCfg = Release|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Debug|x86.Build.0 = Debug|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Release|x86.ActiveCfg = Release|Any CPU
+		{029085E2-1457-4566-8647-1602C64FF315}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {695B744B-05C0-4EA0-A953-372EF5D25B73}
 	EndGlobalSection
 EndGlobal

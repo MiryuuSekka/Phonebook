@@ -1,0 +1,15 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Search";
+}
+<div class="form-horizontal">
+    <h5 >Search</h5>
+    <input type="text" value="sample" />
+    <input type="submit" value="Birth year" onclick="location.href='@Url.Action("Add", "BookController")'" />
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
