@@ -64,9 +64,20 @@ namespace TelephoneBookWEB.Controllers
             BookManager.RemoveFromList(Target);
             var model = new mSearch();
             model.FindedList = BookManager.GetList();
-
-
             return View("Search", model);
+        }
+
+        public ActionResult SortByLastName()
+        {
+            BookManager.SortListByLastName();
+            return View("Index", BookManager.GetList());
+        }
+
+
+        public ActionResult SortByYear()
+        {
+            BookManager.SortListByBirth();
+            return View("Index", BookManager.GetList());
         }
     }
 }

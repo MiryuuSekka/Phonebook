@@ -6,7 +6,7 @@
     ViewBag.Title = "Index";
 }
 
-<h3>List of Persons at telephone book</h3>
+<h3>List of persons at telephone book</h3>
 
 <input type="submit" value="Add person at book" onclick="location.href='@Url.Action("Add", "Book")'" />
 <input type="submit" value="Search" onclick="location.href='@Url.Action("Search", "Book")'" />
@@ -15,16 +15,14 @@
 
 <table class="table">
     <tr>
+        <th> First name </th>
+
         <th>
-            <input type="submit" value="First name" onclick="location.href='@Url.Action("Sort", "Book")'" />
+            <input type="submit" value="Last name" onclick="location.href='@Url.Action("SortByLastName", "Book")'" />
         </th>
 
         <th>
-            <input type="submit" value="Last name" onclick="location.href='@Url.Action("Sort", "Book")'" />
-        </th>
-
-        <th>
-            <input type="submit" value="Birth year" onclick="location.href='@Url.Action("Sort", "Book")'" />
+            <input type="submit" value="Birth year" onclick="location.href='@Url.Action("SortByYear", "Book")'" />
         </th>
 
         <th> Phone number </th>

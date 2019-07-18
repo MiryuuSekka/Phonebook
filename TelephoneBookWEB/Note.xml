@@ -7,21 +7,15 @@
     <Phone>85675454566</Phone>
   </Person>
   <Person>
-    <FirstName>Rio</FirstName>
-    <LastName>Kamishiro</LastName>
-    <BirthYear>1994</BirthYear>
-    <Phone>89354342123</Phone>
-  </Person>
-  <Person>
-    <FirstName>Parker</FirstName>
-    <LastName>Piter</LastName>
-    <BirthYear>1984</BirthYear>
-    <Phone>83464342678</Phone>
-  </Person>
-  <Person>
     <FirstName>Morisawa</FirstName>
     <LastName>Chiaki</LastName>
     <BirthYear>1999</BirthYear>
     <Phone>85673486123</Phone>
+  </Person>
+  <Person>
+    <FirstName>Rio</FirstName>
+    <LastName>Kamishiro</LastName>
+    <BirthYear>1994</BirthYear>
+    <Phone>89354342123</Phone>
   </Person>
 </ArrayOfPerson>

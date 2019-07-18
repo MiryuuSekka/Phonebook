@@ -21,6 +21,7 @@ namespace FileManager.Helpers
 
         internal void WriteFile(AnyType notes)
         {
+            File.WriteAllText(FilePath, "");
             using (var writer = new FileStream(FilePath, FileMode.OpenOrCreate))
             {
                 Serializer.Serialize(writer, notes);
