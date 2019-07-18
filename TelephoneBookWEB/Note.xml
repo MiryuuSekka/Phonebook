@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <FirstName>Tomas</FirstName>
+    <LastName>Arclight</LastName>
+    <BirthYear>1994</BirthYear>
+    <Phone>85675454566</Phone>
+  </Person>
+</ArrayOfPerson>

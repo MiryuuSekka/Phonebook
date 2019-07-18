@@ -10,16 +10,9 @@ namespace TelephoneBookWEB.Controllers
 {
     public class BookController : Controller
     {
-        BookRepository Service;
-        public BookController()
+        public ActionResult Index()
         {
-            Service = new BookRepository();
-        }
-
-        public async Task<ActionResult> Index()
-        {
-            var BookCopy = await Service.GetBook();
-
+            var BookCopy = BookRepository.WorkAtBook.GetList();
 
             return View(BookCopy);
         }
@@ -32,12 +25,20 @@ namespace TelephoneBookWEB.Controllers
         [HttpPost]
         public ActionResult Add(Person obj)
         {
+            BookRepository.WorkAtBook.AddToList(obj);
             return View();
         }
 
         public ActionResult Delete()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Person obj)
+        {
+            BookRepository.WorkAtBook.RemoveFromList(obj);
+            return View(BookRepository.WorkAtBook.GetList());
         }
 
         public ActionResult Search()
@@ -48,15 +49,10 @@ namespace TelephoneBookWEB.Controllers
         [HttpPost]
         public ActionResult Search(string Key)
         {
-            var FindedList = Service.Search(Key);
+            var FindedList = BookRepository.WorkAtBook.SearchInList(Key);
             return View(FindedList);
         }
-        public ActionResult SearchResult(string Key)
-        {
-            var FindedList = Service.Search(Key);
-            return View(FindedList);
-        }
-
+        
         public ActionResult ViewPhonebook()
         {
             return View();

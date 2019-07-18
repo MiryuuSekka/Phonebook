@@ -11,9 +11,9 @@ namespace FileManager
         XmlHelper<List<Person>> xmlHelper;
         List<Person> LocalPhoneBook;
 
-        public Manager()
+        public Manager(string Path)
         {
-            xmlHelper = new XmlHelper<List<Person>>();
+            xmlHelper = new XmlHelper<List<Person>>(Path);
             LocalPhoneBook = new List<Person>();
         }
 

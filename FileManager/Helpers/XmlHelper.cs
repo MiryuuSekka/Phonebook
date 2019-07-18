@@ -5,31 +5,33 @@ namespace FileManager.Helpers
 {
     internal class XmlHelper<AnyType>
     {
+        string FilePath;
         AnyType myMethod(AnyType Type)
         {
             return Type;
         }
 
-        XmlSerializer _serializer;
+        XmlSerializer Serializer;
 
-        internal XmlHelper()
+        internal XmlHelper(string Path)
         {
-            _serializer = new XmlSerializer(typeof(AnyType));
+            FilePath = Path;
+            Serializer = new XmlSerializer(typeof(AnyType));
         }
 
         internal void WriteFile(AnyType notes)
         {
-            using (var writer = new FileStream("Note.xml", FileMode.OpenOrCreate))
+            using (var writer = new FileStream(FilePath, FileMode.OpenOrCreate))
             {
-                _serializer.Serialize(writer, notes);
+                Serializer.Serialize(writer, notes);
             }
         }
 
         internal bool ReadFile(ref AnyType notes)
         {
-            using (var reader = new FileStream("Note.xml", FileMode.OpenOrCreate))
+            using (var reader = new FileStream(FilePath, FileMode.OpenOrCreate))
             {
-                notes = (AnyType)_serializer.Deserialize(reader);
+                notes = (AnyType)Serializer.Deserialize(reader);
             }
             return true;
         }
