@@ -8,48 +8,45 @@
 
 <h3>List of Persons at telephone book</h3>
 
-<input type="submit" value="Add person at book" onclick="location.href='@Url.Action("Add", "BookController")'" />
+<input type="submit" value="Add person at book" onclick="location.href='@Url.Action("Add", "Book")'" />
+<input type="submit" value="Search" onclick="location.href='@Url.Action("Search", "Book")'" />
 
-<div class="form-horizontal">
-    <input type="submit" value="Sort by name" onclick="location.href='@Url.Action("Add", "BookController")'" />
-</div>
+<hr />
 
-<div class="form-horizontal">
-    <input type="submit" value="Search Person or phone number at book" onclick="location.href='@Url.Action("Add", "BookController")'" />
-    <input type="submit" value="Refresh book" onclick="location.href='@Url.Action("Add", "BookController")'" />
-    </div>
+<table class="table">
+    <tr>
+        <th>
+            <input type="submit" value="First name" onclick="location.href='@Url.Action("Sort", "Book")'" />
+        </th>
 
-    <table class="table">
+        <th>
+            <input type="submit" value="Last name" onclick="location.href='@Url.Action("Sort", "Book")'" />
+        </th>
+
+        <th>
+            <input type="submit" value="Birth year" onclick="location.href='@Url.Action("Sort", "Book")'" />
+        </th>
+
+        <th> Phone number </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th> First name </th>
-            <th> Last name </th>
-            <th>
-                <input type="submit" value="Birth year" onclick="location.href='@Url.Action("Add", "BookController")'" />
-            </th>
-            <th> Phone number </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
         </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FirstName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BirthYear)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Phone)
-                </td>
-
-                <td>
-                    @Html.ActionLink("Delete", "DeletePerson", new { })
-                </td>
-            </tr>
-        }
+    }
 
 
-    </table>
+</table>

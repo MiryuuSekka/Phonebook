@@ -34,7 +34,7 @@ namespace FileManager
 
         public void RemoveFromList(Person SelectedPerson)
         {
-            LocalPhoneBook.Remove(SelectedPerson);
+            LocalPhoneBook.RemoveAll(c => (c.Phone == SelectedPerson.Phone)&& (c.BirthYear == SelectedPerson.BirthYear)&& (c.LastName== SelectedPerson.LastName)&&(c.FirstName == SelectedPerson.FirstName));
         }
 
         public void AddToList(Person newPerson)

@@ -8,19 +8,20 @@ using FileManager;
 using FileManager.Models;
 
 namespace TelephoneBookWEB
-{ 
+{
     public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BookRepository.WorkAtBook.ReadFile();
-        }
+            Controllers.BookController.BookManager.ReadFile();
+    }
 
-        protected void Application_End()
+        protected void Application_Disposed()
         {
-            BookRepository.WorkAtBook.SaveFile();
+            Controllers.BookController.BookManager.SaveFile();
         }
+       
     }
 }
